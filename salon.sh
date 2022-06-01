@@ -52,7 +52,7 @@ MAIN_MENU() {
         INS_SERV_RES=$($PSQL "INSERT INTO appointments(customer_id, service_id, time) VALUES($CUSTOMER_ID, $SERVICE_ID_SELECTED, '$SERVICE_TIME')")
         if [[ $INS_SERV_RES ]]
         then 
-         echo -e "\nI have put you down for a $NAME_CUS at $SERVICE_TIME, $(echo $CUSTOMER_NAME | sed -r 's/^*| *$//g')."
+         echo -e "\nI have put you down for a $NAME_CUS at $SERVICE_TIME, $CUSTOMER_NAME."
           fi
         fi
       fi
